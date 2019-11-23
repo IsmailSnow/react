@@ -8,15 +8,11 @@ class  App extends Component {
     text: sampleText
   }
 
-  componentDidMount(){
-    const text = localStorage.getItem('text')
-    if(text){
-      this.setState({text})
-    }else{
-      this.setState({text:sampleText})
-    }
-    
-  }
+  // componentDidMount(){
+  //   console.log("in init")
+  //   const text = localStorage.getItem('text')
+  //   this.setState({text})
+  // }
 
   componentDidUpdate(){
     console.log("in init")

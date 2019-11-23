@@ -9,13 +9,9 @@ class  App extends Component {
   }
 
   componentDidMount(){
+    console.log("in init")
     const text = localStorage.getItem('text')
-    if(text){
-      this.setState({text})
-    }else{
-      this.setState({text:sampleText})
-    }
-    
+    this.setState({text})
   }
 
   componentDidUpdate(){

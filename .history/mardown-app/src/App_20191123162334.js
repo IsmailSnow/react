@@ -9,19 +9,12 @@ class  App extends Component {
   }
 
   componentDidMount(){
-    const text = localStorage.getItem('text')
-    if(text){
-      this.setState({text})
-    }else{
-      this.setState({text:sampleText})
-    }
-    
+    console.log("in init")
   }
 
   componentDidUpdate(){
     console.log("in init")
-    const {text} =this.state;
-    localStorage.setItem('text',text)
+    const { text} =this.state;
   }
 
   handleTextChange =  event =>{
