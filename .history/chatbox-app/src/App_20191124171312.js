@@ -1,6 +1,5 @@
 import React  , {Component , createRef} from 'react';
 import './App.css';
-import './animations.css'
 import Formulaire from './components/Formulaire'
 import Message from './components/Message'
 
@@ -47,12 +46,10 @@ class App extends Component {
     
     const messages = Object.keys(this.state.messages)
                            .map(key => (
-                             <CSSTransition  key={key} timeout={200} classNames='fade' >
-                              <Message pseudo  = {this.state.messages[key].pseudo}
+                             <Message pseudo  = {this.state.messages[key].pseudo}
                                       message = {this.state.messages[key].message}
+                                      key={key}
                                       isUser={this.isUser} ></Message>
-                             </CSSTransition>
-                             
                            ))
 
     return (
