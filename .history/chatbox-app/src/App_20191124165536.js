@@ -21,17 +21,9 @@ class App extends Component {
     })
   }
 
-  componentDidUpdate(){
-    const ref = this.messagesRef.current
-    ref.scrollTop = ref.scrollHeight
-  }
-
   addMessage = message =>{
     const messages = {...this.state.messages}
     messages[`message-${Date.now()}`] = message
-    Object.keys(messages)
-          .slice(0,-10)
-          .forEach(key => messages[key]= null)
     this.setState({messages})
   }
   
