@@ -19,7 +19,7 @@ handleSubmit = event => {
 
 render (){
   if(this.state.goToChat){
-    return <Redirect push to={`/pseudo/${this.state.pseudo}`} />
+    return <Redirect push to={`/pseudo/${this.state.pseudo}`}></Redirect>
   }
         
   return (

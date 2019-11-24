@@ -6,7 +6,10 @@ import Message from './components/Message'
 class App extends Component {
 
   state = {
-    messages: {},
+    messages: {
+       pseudo: this.props.match.params.pseudo,
+       message : '' 
+    },
     pseudo: this.props.match.params.pseudo
   }
 
@@ -22,7 +25,7 @@ class App extends Component {
                            .map(key => (
                              <Message pseudo  = {this.state.messages[key].pseudo}
                                       message = {this.state.messages[key].message}
-                                      key={key} ></Message>
+                                      key={key} />
                            ))
 
     return (
